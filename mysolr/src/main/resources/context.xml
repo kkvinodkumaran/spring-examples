@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:solr="http://www.springframework.org/schema/data/solr"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd http://www.springframework.org/schema/data/solr http://www.springframework.org/schema/data/solr/spring-solr.xsd">
+ 
+  
+  
+  <solr:repositories base-package="com.mysolr.repo"/>
+  <solr:solr-server id="solrServer" url="http://0.0.0.0:8983/solr" />
+  		<bean id="solrTemplate"  class="org.springframework.data.solr.core.SolrTemplate">
+            <constructor-arg index="0" ref="solrServer"/>
+            <constructor-arg index="1" value="location"/> 
+        </bean>
+     <!-- <bean id="locRepository" class="org.springframework.data.solr.repository.support.SimpleSolrRepository">
+     	<property name="solrOperations" ref="solrTemplate"/>
+     </bean> -->   
+        
+</beans>
