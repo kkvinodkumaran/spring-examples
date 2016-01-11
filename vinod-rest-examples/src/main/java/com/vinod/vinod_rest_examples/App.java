@@ -20,8 +20,7 @@ public class App {
 		jerseyServlet.setInitOrder(0);
 
 		// Setting pacakge name over here to load services
-		jerseyServlet.setInitParameter("jersey.config.server.provider.packages",
-				"com.vinod.vinod_rest_examples");
+		jerseyServlet.setInitParameter("jersey.config.server.provider.packages", "com.vinod.vinod_rest_examples");
 		try {
 			jettyServer.start();
 			jettyServer.join();
