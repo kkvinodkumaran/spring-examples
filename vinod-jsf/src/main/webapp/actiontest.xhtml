@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+<head>
+<title>My JSF Examples</title>
+</head>
+<h:body>
+   #{myFirstManagedBean.message}
+<h:form>
+		<h1>
+			<h:outputText value="Hello ActionListener!" />
+		</h1>
+		<h:outputText id="name" value="Name :" />
+		<h:inputText id="nametext" value="#{actionListenerBean.name}">
+		</h:inputText>
+		<h:outputText value="ActionListener Using method binding" />
+		<h:commandButton value="Method binding 1" id="methodbindingButton1"
+			actionListener="#{actionListenerBean.actionSubmit}"
+			action="#{actionListenerBean.submit}" />
+		<br> </br>
+		<br> </br>
+		<h:outputText value="ActionListener Using ActionListener Interface" />
+		<h:commandButton id="ActionListenerButton"
+			value="Action Listener Interface"
+			action="#{actionListenerBean.submit}">
+			<f:actionListener type="com.vinod.jsf.MyActionListener" />
+		</h:commandButton>
+	</h:form>
+
+</h:body>
+</html>
