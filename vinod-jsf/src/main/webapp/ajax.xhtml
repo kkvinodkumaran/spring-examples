@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+<h:head>
+	<title>Facelet Title</title>
+</h:head>
+<h:body>
+	<h2>JSF 2 Ajax Example</h2>
+	<h:form id="vinod">
+		<h:outputLabel id="nameLable" value="Name"/>
+		<h:inputText id="name" value="#{ajaxBean.name}" />
+		<h:commandButton action="#{ajaxBean.getDetails}" id="submit"
+			value="Load Details">
+			<f:ajax render="vinod"/> </h:commandButton>
+		<h:outputLabel id="addressLable" value="address" />
+		<h:inputText id="address" value="#{ajaxBean.address}" />
+		<h:outputLabel id="phonenumberLable" value="phonenumber " />
+		<h:inputText id="phonenumber" value="#{ajaxBean.phonenumber}" />
+		<h:outputLabel id="designationLable" value="designation " />
+		<h:inputText id="designation" value="#{ajaxBean.designation}" />
+	</h:form>
+</h:body>
+</html>

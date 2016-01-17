@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+<head>
+<title>My JSF Examples</title>
+</head>
+	        <h:body>
+            <h:form id="vinod">
+                <h:outputText value="Converter Example"/>
+                <h:inputText id="nametext" value="#{converterBean.name}">
+                    <f:converter converterId="com.vinod.InputConverter" />
+                </h:inputText>
+            <h:commandButton value="Click" id="cmd" action="#{converterBean.submit}" >
+            </h:commandButton>
+        </h:form>  
+    </h:body>
+</html>
