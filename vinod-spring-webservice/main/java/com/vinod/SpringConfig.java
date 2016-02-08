@@ -6,6 +6,7 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
 @Configuration
+@EnableWebMvc
 @ComponentScan(basePackages = { "com.vinod" })
 public class SpringConfig {
 
