@@ -3,12 +3,22 @@
 	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
 	id="WebApp_ID" version="2.5">
 		<display-name>Archetype Created Web Application</display-name>
+		<filter>
+			<description>
+			</description>
+			<display-name>MyServletFilter</display-name>
+			<filter-name>MyServletFilter</filter-name>
+			<filter-class>com.vinod.MyServletFilter</filter-class>
+		</filter>
+		<filter-mapping>
+			<filter-name>MyServletFilter</filter-name>
+			<url-pattern>/MyFirstServlet</url-pattern>
+		</filter-mapping>
 		<servlet>
 			<servlet-name>MyFirstServlet</servlet-name>
 			<servlet-class>com.vinod.MyFirstServlet</servlet-class>
 		</servlet>
 		<servlet-mapping>
 			<servlet-name>MyFirstServlet</servlet-name>
-			<url-pattern>/*</url-pattern>
-		</servlet-mapping>
+    <url-pattern>/MyFirstServlet</url-pattern>		</servlet-mapping>
 	</web-app>
