@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here....</title>
+<title>Insert title here.... </title>
 </head>
 <body>
 	<form name="input" action="http://localhost:8081/MyFirstServlet"

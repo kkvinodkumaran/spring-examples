@@ -41,7 +41,7 @@ public class MyServletFilter implements Filter {
         if (request.getParameter("user")!=null&&!request.getParameter("user").equals("admin")) {
             response.setContentType("text/html");
             PrintWriter out = response.getWriter();
-            out.println("<HTML><TITLE>Http Servlet Example</TITLE><BODY>");
+            out.println("<HTML><TITLE> Http Servlet Example</TITLE><BODY>");
             out.println("<H2>You are not authorized to login</H2><HR>");
             out.println("</BODY><HTML>");
             out.close();
